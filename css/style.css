@@ -7,7 +7,7 @@
 a{
     text-decoration: none;
 }
-/* colors */
+/* COLORI DOCUMENTO */
 :root{
     --orange: orange;
     --withe: white;
@@ -15,11 +15,7 @@ a{
     --red: red;
     --green: green;
 }
-/* margins */
-:root{
-    --al-centro: 0 auto;
-}
-/* header */
+/* NAVBAR */
 header{
     position: fixed;
     top: 0;
@@ -45,19 +41,17 @@ header img{
     max-width: 130px;
     padding-top: 5px;
 }
-/* body */
+/* CONTENITORE */
 .container{
     display: flex;
     flex-wrap: wrap;
     width: 80%;
+    max-width: 1200px;
     margin: 150px auto;
-    
 }
+/* REGOLE CARDS */
 .card{
     width: calc(100% / 3);
-    /* debug */
-    
-    
 }
 .card a{
     color: var(--black);
@@ -66,52 +60,27 @@ header img{
     position: relative;
     max-width: 100%;
     margin: 10px 10px;
-    
 }
-
+/* BOLOCCO IMMAGINI HOVER */
 .inner-card img{
     width: 100%;
 }
-
-/* Imposta le immagini in modo che una sia visibile e l'altra no di default */
-.inner-card img:first-of-type {
+.inner-card .immagine1 {
     position: relative;
     z-index: 1;
 }
-
-.inner-card img:last-of-type {
-    
+.inner-card .immagine2 {
     position: absolute; 
     top: 0;
     left: 0;
 }
-
-/* Cambia l'opacity al passaggio del mouse */
-.inner-card:hover img:first-of-type {
-    opacity: 0;
+.inner-card:hover .immagine1 {
+    z-index: 0;
 }
-
-.inner-card:hover img:last-of-type {
-    opacity: 1;
+.inner-card:hover .immagine2 {
+    z-index: 1;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/* ELEMENTI POSIZIONATI SULL'IMMAGINE */
 .heart{
     position: absolute;
     top: 20px;
@@ -148,14 +117,8 @@ header img{
     background-color: var(--green);
     padding: 5px 10px;
 }
-
-
-
-
-
-
+/* DESCRIZIONE BOTTOM CARDS */
 .descrizione{
-    
     width: 90%;
     margin: 0 auto;
     margin-left: 10px;
@@ -171,7 +134,7 @@ header img{
     text-decoration: line-through;
     color: var(--black);
 }
-
+/* FOOTER */
 footer{
     display: flex;
     flex-direction: column;
@@ -183,27 +146,25 @@ footer{
     
 
 }
+/* DIVISIONE SEZIONI FOOTER */
 .first-section-footer{
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 90%;
     padding: 10px;
-   
-    
     color: var(--withe);
-}
-.small-text{
-    font-size: .5rem;
 }
 .second-section-footer{
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 90%;
-    
-    
     color: var(--withe);
+}
+/* REGOLE SEZIONI */
+.small-text{
+    font-size: .5rem;
 }
 .second-section-footer li{
     display: inline-block;
